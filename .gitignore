@@ -1,0 +1,40 @@
+# --- Pastas de Compilação e Histórico (Ignora em qualquer subpasta) ---
+**/__history/
+**/__recovery/
+**/Win32/
+**/Win64/
+**/Android/
+**/iOSDevice64/
+
+# --- Arquivos Binários e Intermediários ---
+*.exe
+*.dll
+*.bpl
+*.dcu
+*.dcp
+*.rsm
+*.map
+*.o
+*.ppu
+*.a
+
+# --- Arquivos de Configuração de Usuário (NÃO subir) ---
+*.dproj.local
+*.identcache
+*.tvsconfig
+*.stat
+*.dsk
+*.local
+
+# --- Arquivos Temporários e Backups ---
+*.~*
+*.bak
+*.tmp
+
+# --- Logs de Testes ---
+*.log
+TestResults/
+
+# --- Se usar Visual Studio Code ou outras IDEs auxiliares ---
+.vscode/
+.idea/
