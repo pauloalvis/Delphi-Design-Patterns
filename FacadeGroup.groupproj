@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B23295AE-3AA2-4821-9A2A-A0041A37317B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="src\structural\facade\facade.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="test\structural\facade\facade_test.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="facade">
+        <MSBuild Projects="src\structural\facade\facade.dproj"/>
+    </Target>
+    <Target Name="facade:Clean">
+        <MSBuild Projects="src\structural\facade\facade.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="facade:Make">
+        <MSBuild Projects="src\structural\facade\facade.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="facade_test">
+        <MSBuild Projects="test\structural\facade\facade_test.dproj"/>
+    </Target>
+    <Target Name="facade_test:Clean">
+        <MSBuild Projects="test\structural\facade\facade_test.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="facade_test:Make">
+        <MSBuild Projects="test\structural\facade\facade_test.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="facade;facade_test"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="facade:Clean;facade_test:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="facade:Make;facade_test:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
