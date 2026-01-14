@@ -20,7 +20,7 @@ Cada pasta dentro de `src` representa um padrão de projeto aplicado a um cenár
 | Categoria | Padrão | Descrição | Status |
 | :--- | :--- | :--- | :--- |
 | **Behavioral** | [Strategy](./src/behavioral/strategy) | Cálculo de Fretes (Sedex/PAC) sem IFs | ✅ Pronto |
-| **Creational** | Factory Method | (Em breve...) | 🚧 |
+| **Creational** | [Factory Method](./src/creational/factory_method) | Resolve o "Dilema da Criação" removendo a instanciação do Form | ✅ Pronto |
 
 ---
 
@@ -32,10 +32,10 @@ O projeto foi desenvolvido utilizando **Delphi 12 (Athens)**, mas o código-font
 *   **Compatibilidade:** Testado no Delphi 12, mas compatível com Delphi Berlin, Tokyo, Rio, Sydney, Alexandria e anteriores (que suportem Generics/Interfaces).
 *   **Testes:** DUnitX (Recomendado para versões XE ou superiores).
 
-> **Dica para versões antigas:** Se você usa uma versão muito antiga (ex: Delphi 7), basta criar um novo projeto e adicionar as units manualmente. A lógica do padrão Strategy funciona perfeitamente.
+> **Dica para versões antigas:** Se você usa uma versão muito antiga (ex: Delphi 7), basta criar um novo projeto e adicionar as units manualmente. A lógica dos padrões funciona perfeitamente, bastando ajustar a sintaxe de Generics se necessário.
 
 ---
 
 ## 🚀 Como Executar
 
-1. Clone o repositório:
+1.  **Clone o repositório:**
