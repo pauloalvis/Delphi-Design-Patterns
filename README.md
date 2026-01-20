@@ -21,6 +21,7 @@ Cada pasta dentro de `src` representa um padrão de projeto aplicado a um cenár
 | :--- | :--- | :--- | :--- |
 | **Behavioral** | [Strategy](./src/behavioral/strategy) | Cálculo de Fretes (Sedex/PAC) sem IFs | ✅ Pronto |
 | **Creational** | [Factory Method](./src/creational/factory_method) | Resolve o "Dilema da Criação" removendo a instanciação do Form | ✅ Pronto |
+| **Structural** | [Facade](./src/structural/facade) | Simplificação de Checkout (Estoque, Financeiro e NF) via interface única | ✅ Concluído |
 
 ---
 
@@ -28,9 +29,9 @@ Cada pasta dentro de `src` representa um padrão de projeto aplicado a um cenár
 
 O projeto foi desenvolvido utilizando **Delphi 12 (Athens)**, mas o código-fonte (`.pas`) é compatível com versões anteriores.
 
-*   **Linguagem:** Object Pascal (Delphi).
-*   **Compatibilidade:** Testado no Delphi 12, mas compatível com Delphi Berlin, Tokyo, Rio, Sydney, Alexandria e anteriores (que suportem Generics/Interfaces).
-*   **Testes:** DUnitX (Recomendado para versões XE ou superiores).
+* **Linguagem:** Object Pascal (Delphi).
+* **Compatibilidade:** Testado no Delphi 12, mas compatível com Delphi Berlin, Tokyo, Rio, Sydney, Alexandria e anteriores (que suportem Generics/Interfaces).
+* **Testes:** DUnitX (Recomendado para versões XE ou superiores).
 
 > **Dica para versões antigas:** Se você usa uma versão muito antiga (ex: Delphi 7), basta criar um novo projeto e adicionar as units manualmente. A lógica dos padrões funciona perfeitamente, bastando ajustar a sintaxe de Generics se necessário.
 
@@ -39,3 +40,8 @@ O projeto foi desenvolvido utilizando **Delphi 12 (Athens)**, mas o código-font
 ## 🚀 Como Executar
 
 1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/delphi-design-patterns.git](https://github.com/seu-usuario/delphi-design-patterns.git)
+    ```
+2.  **Abra o Group Project (`.groupproj`) ou os projetos individuais (`.dproj`).**
+3.  **Compile e execute os exemplos.**
