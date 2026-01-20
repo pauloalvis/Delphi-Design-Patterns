@@ -41,7 +41,7 @@ O projeto foi desenvolvido utilizando **Delphi 12 (Athens)**, mas o código-font
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/delphi-design-patterns.git](https://github.com/seu-usuario/delphi-design-patterns.git)
+    bash git clone https://github.com/seu-usuario/delphi-design-patterns.git 
     ```
 2.  **Abra o Group Project (`.groupproj`) ou os projetos individuais (`.dproj`).**
 3.  **Compile e execute os exemplos.**
