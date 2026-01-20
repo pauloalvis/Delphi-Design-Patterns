@@ -1,47 +1,43 @@
-# 🏗️ Facade Pattern - Simplificação de Subsistemas em Delphi
+# ??? Delphi Design Patterns & Clean Code
 
-> **"Interface Simples, Poder Oculto."**
-> Este projeto demonstra como utilizar o padrão **Facade (Fachada)** para fornecer uma interface única e simplificada para um conjunto complexo de subsistemas, reduzindo o acoplamento entre a interface do utilizador (UI) e a lógica de negócio.
+![Delphi Version](https://img.shields.io/badge/Delphi-12%20Athens-red)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Status](https://img.shields.io/badge/status-active-green)
 
----
-
-## 📋 Descrição e Objetivo
-
-Em muitos sistemas, a realização de uma única tarefa (como finalizar uma venda) exige a interação com múltiplos módulos independentes. Sem um padrão adequado, a UI acaba "sabendo demais", instanciando e coordenando diversas classes de baixo nível.
-
-**O Problema (Antes):**
-O formulário principal precisaria de conhecer e orquestrar as classes de `TEstoque`, `TFinanceiro` e `TNotaFiscal` manualmente. Qualquer mudança na forma como um desses subsistemas opera exigiria alterações diretas na unidade visual.
-
-**A Solução (Depois):**
-A UI interage exclusivamente com a interface `IVendaFacade`. A implementação concreta, `TVendaFacade`, assume a responsabilidade de coordenar os subsistemas internos, escondendo toda a complexidade técnica atrás de um único método: `FinalizarVenda`.
-
-
-
-### Benefícios
-* ✅ **Desacoplamento:** A interface do utilizador não conhece as entranhas dos subsistemas de estoque ou financeiro.
-* ✅ **Simplicidade:** Reduz o "ruído" visual no formulário, que passa a lidar com um contrato simples e direto.
-* ✅ **Segurança Arquitetural:** Impede que a lógica de negócio "vaze" para a camada de apresentação.
-* ✅ **Extensibilidade:** Através do uso de interfaces como `ILogger`, é possível injetar diferentes comportamentos (como logs em memo, ficheiro ou base de dados) sem alterar a fachada.
+> Um reposit�rio de estudos pr�ticos aplicando **Design Patterns** (GoF) e princ�pios de **Clean Code** em Delphi, com foco em resolver problemas reais de sistemas legados.
 
 ---
 
-## 🛠️ Estrutura do Projeto
+## ?? Objetivo
 
-* **`uVenda.Interfaces.pas`**: Define o contrato da fachada (`IVendaFacade`) e o transporte de dados (`IVendaDados`).
-* **`uVenda.Facade.pas`**: Implementação da Fachada que orquestra os subsistemas de estoque, financeiro e fiscal.
-* **`uSubsistemas.pas`**: Contém as classes concretas de negócio que executam as tarefas específicas.
-* **`uLogger.Interfaces.pas`**: Define o contrato para registo de logs via Injeção de Dependência.
-* **`uFrmPrincipal.pas`**: Interface visual que consome a fachada de forma totalmente desacoplada.
+O objetivo deste reposit�rio � demonstrar como sair do "c�digo espaguete" (comum em sistemas legados) e migrar para uma arquitetura orientada a objetos, test�vel e desacoplada.
+
+Cada pasta dentro de `src` representa um padr�o de projeto aplicado a um cen�rio do mundo real.
 
 ---
 
-## 🛠️ Instalação e Requisitos
+## ?? Padr�es Implementados
 
-### Pré-requisitos
-* **IDE:** Delphi (Testado no Delphi 12, compatível com versões que suportam Interfaces e Generics).
-* **Conhecimento:** Conceitos básicos de Programação Orientada a Objetos e Interfaces.
+| Categoria      | Padr�o                                            | Descri��o                                                                | Status       |
+| :------------- | :------------------------------------------------ | :----------------------------------------------------------------------- | :----------- |
+| **Behavioral** | [Strategy](./src/behavioral/strategy)             | C�lculo de Fretes (Sedex/PAC) sem IFs                                    | ? Pronto    |
+| **Creational** | [Factory Method](./src/creational/factory_method) | Resolve o "Dilema da Cria��o" removendo a instancia��o do Form           | ? Pronto    |
+| **Structural** | [Facade](./src/structural/facade)                 | Simplifica��o de Checkout (Estoque, Financeiro e NF) via interface �nica | ? Conclu�do |
 
-### Instalação
-1.  Faz o clone deste repositório para a tua máquina local.
-2.  Abre o projeto (`.dproj`) no Delphi.
-3.  Compila e executa para observar no log como a fachada coordena os três subsistemas com um único comando da UI.
+---
+
+## ??? Tecnologias e Compatibilidade
+
+O projeto foi desenvolvido utilizando **Delphi 12 (Athens)**, mas o c�digo-fonte (`.pas`) � compat�vel com vers�es anteriores.
+
+- **Linguagem:** Object Pascal (Delphi).
+- **Compatibilidade:** Testado no Delphi 12, mas compat�vel com Delphi Berlin, Tokyo, Rio, Sydney, Alexandria e anteriores (que suportem Generics/Interfaces).
+- **Testes:** DUnitX (Recomendado para vers�es XE ou superiores).
+
+> **Dica para vers�es antigas:** Se voc� usa uma vers�o muito antiga (ex: Delphi 7), basta criar um novo projeto e adicionar as units manualmente. A l�gica dos padr�es funciona perfeitamente, bastando ajustar a sintaxe de Generics se necess�rio.
+
+---
+
+## ?? Como Executar
+
+1.  **Clone o reposit�rio:**

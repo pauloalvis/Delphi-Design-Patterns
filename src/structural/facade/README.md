@@ -1,57 +1,48 @@
-# ??? Facade Pattern - Simplificação de Subsistemas em Delphi
+# ğŸ—ï¸ Facade Pattern - SimplificaÃ§Ã£o de Subsistemas em Delphi
 
 > **"Interface Simples, Poder Oculto."**
-> Este projeto demonstra como utilizar o padrão **Facade (Fachada)** para fornecer uma interface única e simplificada para um conjunto complexo de subsistemas, reduzindo o acoplamento entre a interface do usuário (UI) e a lógica de negócio.
+> Este projeto demonstra como utilizar o padrÃ£o **Facade (Fachada)** para fornecer uma interface Ãºnica e simplificada para um conjunto complexo de subsistemas, reduzindo o acoplamento entre a interface do utilizador (UI) e a lÃ³gica de negÃ³cio.
 
 ---
 
-## ?? Descrição e Objetivo
+## ğŸ“‹ DescriÃ§Ã£o e Objetivo
 
-Em muitos sistemas, a realização de uma única tarefa (como finalizar uma venda) exige a interação com múltiplos módulos independentes. Sem um padrão adequado, a UI acaba "sabendo demais", instanciando e coordenando diversas classes.
+Em muitos sistemas, a realizaÃ§Ã£o de uma Ãºnica tarefa (como finalizar uma venda) exige a interaÃ§Ã£o com mÃºltiplos mÃ³dulos independentes. Sem um padrÃ£o adequado, a UI acaba "sabendo demais", instanciando e coordenando diversas classes de baixo nÃ­vel.
 
 **O Problema (Antes):**
-O formulário principal precisaria conhecer e orquestrar as classes de `TEstoque`, `TFinanceiro` e `TNotaFiscal` manualmente. Qualquer mudança na forma como um desses subsistemas opera exigiria alterações diretas na unidade visual.
+O formulÃ¡rio principal precisaria de conhecer e orquestrar as classes de `TEstoque`, `TFinanceiro` e `TNotaFiscal` manualmente. Qualquer mudanÃ§a na forma como um desses subsistemas opera exigiria alteraÃ§Ãµes diretas na unidade visual.
 
-**A Solução (Depois):**
-A UI interage exclusivamente com a interface `IVendaFacade`. A implementação concreta, `TVendaFacade`, assume a responsabilidade de coordenar os subsistemas internos, escondendo toda a complexidade técnica atrás de um único método: `FinalizarVenda`.
+**A SoluÃ§Ã£o (Depois):**
+A UI interage exclusivamente com a interface `IVendaFacade`. A implementaÃ§Ã£o concreta, `TVendaFacade`, assume a responsabilidade de coordenar os subsistemas internos, escondendo toda a complexidade tÃ©cnica atrÃ¡s de um Ãºnico mÃ©todo: `FinalizarVenda`.
 
-### Benefícios
+### BenefÃ­cios
 
-- ? **Desacoplamento:** A interface do usuário não conhece as entranhas dos subsistemas de estoque ou financeiro.
-
-- ? **Simplicidade:** Reduz o "ruído" visual no formulário, que passa a lidar com um contrato simples e direto.
-
-- ? **Segurança Arquitetural:** Impede que a lógica de negócio vaze para a camada de apresentação.
-
-- ? **Extensibilidade:** Através do uso de interfaces como `ILogger`, é possível injetar diferentes comportamentos (como logs em arquivo ou tela) sem alterar a fachada.
+- âœ… **Desacoplamento:** A interface do utilizador nÃ£o conhece as entranhas dos subsistemas de estoque ou financeiro.
+- âœ… **Simplicidade:** Reduz o "ruÃ­do" visual no formulÃ¡rio, que passa a lidar com um contrato simples e direto.
+- âœ… **SeguranÃ§a Arquitetural:** Impede que a lÃ³gica de negÃ³cio "vaze" para a camada de apresentaÃ§Ã£o.
+- âœ… **Extensibilidade:** AtravÃ©s do uso de interfaces como `ILogger`, Ã© possÃ­vel injetar diferentes comportamentos (como logs em memo, ficheiro ou base de dados) sem alterar a fachada.
 
 ---
 
-## ??? Estrutura do Projeto
+## ğŸ› ï¸ Estrutura do Projeto
 
-- **`uVenda.Interfaces.pas`**: Define o contrato da fachada (`IVendaFacade`) e dos dados necessários (`IVendaDados`).
-
-- **`uVenda.Facade.pas`**: Implementação da Fachada que orquestra os subsistemas.
-
-- **`uSubsistemas.pas`**: Contém as classes concretas de negócio (`TEstoque`, `TFinanceiro`, `TNotaFiscal`).
-
-- **`uLogger.Interfaces.pas`**: Define o contrato para registro de logs via Injeção de Dependência.
-
-- **`uFrmPrincipal.pas`**: Interface visual que consome a fachada de forma desacoplada.
+- **`uVenda.Interfaces.pas`**: Define o contrato da fachada (`IVendaFacade`) e o transporte de dados (`IVendaDados`).
+- **`uVenda.Facade.pas`**: ImplementaÃ§Ã£o da Fachada que orquestra os subsistemas de estoque, financeiro e fiscal.
+- **`uSubsistemas.pas`**: ContÃ©m as classes concretas de negÃ³cio que executam as tarefas especÃ­ficas.
+- **`uLogger.Interfaces.pas`**: Define o contrato para registo de logs via InjeÃ§Ã£o de DependÃªncia.
+- **`uFrmPrincipal.pas`**: Interface visual que consome a fachada de forma totalmente desacoplada.
 
 ---
 
-## ??? Instalação e Requisitos
+## ğŸ› ï¸ InstalaÃ§Ã£o e Requisitos
 
-### Pré-requisitos
+### PrÃ©-requisitos
 
-- **IDE:** Delphi (Testado no Delphi 12, compatível com versões que suportam Interfaces e Generics).
-- **Dependências:** Nenhuma dependência externa necessária.
+- **IDE:** Delphi (Testado no Delphi 12, compatÃ­vel com versÃµes que suportam Interfaces e Generics).
+- **Conhecimento:** Conceitos bÃ¡sicos de ProgramaÃ§Ã£o Orientada a Objetos e Interfaces.
 
-### Instalação
+### InstalaÃ§Ã£o
 
-1. Clone este repositório para sua máquina local.
-2. Abra o projeto no Delphi.
-3. Compile e execute para visualizar o log de execução orquestrado pela fachada.
-
----
+1.  Faz o clone deste repositÃ³rio para a tua mÃ¡quina local.
+2.  Abre o projeto (`.dproj`) no Delphi.
+3.  Compila e executa para observar no log como a fachada coordena os trÃªs subsistemas com um Ãºnico comando da UI.
