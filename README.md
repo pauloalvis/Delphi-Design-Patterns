@@ -19,8 +19,8 @@ Cada pasta dentro de `src` representa um padrão de projeto aplicado a um cenár
 
 | Categoria | Padrão | Descrição | Status |
 | :--- | :--- | :--- | :--- |
-| **Behavioral** | [Strategy](./src/behavioral/strategy) | Cálculo de Fretes (Sedex/PAC) sem IFs | ✅ Pronto |
-| **Creational** | [Factory Method](./src/creational/factory_method) | Resolve o "Dilema da Criação" removendo a instanciação do Form | ✅ Pronto |
+| **Behavioral** | [Strategy](./src/behavioral/strategy) | Cálculo de Fretes (Sedex/PAC) sem IFs | ✅ Concluído |
+| **Creational** | [Factory Method](./src/creational/factory_method) | Resolve o "Dilema da Criação" removendo a instanciação do Form | ✅ Concluído |
 | **Structural** | [Facade](./src/structural/facade) | Simplificação de Checkout (Estoque, Financeiro e NF) via interface única | ✅ Concluído |
 
 ---
