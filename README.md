@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Status](https://img.shields.io/badge/status-active-green)
 
-> Um repositório de estudos práticos aplicando **Design Patterns** (GoF) e princípios de **Clean Code** em Delphi, com foco em resolver problemas reais de sistemas legados.
+> Um repositório de estudos práticos aplicando **Design Patterns** (GoF) e princípios de **Clean Code** em Delphi, com foco em resolver problemas reais de sistemas legados..
 
 ---
 
