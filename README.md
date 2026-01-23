@@ -1,44 +1,43 @@
-# ??? Delphi Design Patterns & Clean Code
+# ğŸ›ï¸ Delphi Design Patterns & Clean Code
 
 ![Delphi Version](https://img.shields.io/badge/Delphi-12%20Athens-red)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 ![Status](https://img.shields.io/badge/status-active-green)
 
-> Um repositório de estudos práticos aplicando **Design Patterns** (GoF) e princípios de **Clean Code** em Delphi, com foco em resolver problemas reais de sistemas legados..
+> Um repositÃ³rio de estudos prÃ¡ticos aplicando **Design Patterns** (GoF) e princÃ­pios de **Clean Code** em Delphi, com foco em resolver problemas reais de sistemas legados.
 
 ---
 
-## ?? Objetivo
+## ğŸ¯ Objetivo
+O objetivo deste repositÃ³rio Ã© demonstrar como sair do "cÃ³digo espaguete" (comum em sistemas legados) e migrar para uma arquitetura orientada a objetos, testÃ¡vel e desacoplada.
 
-O objetivo deste repositório é demonstrar como sair do "código espaguete" (comum em sistemas legados) e migrar para uma arquitetura orientada a objetos, testável e desacoplada.
-
-Cada pasta dentro de `src` representa um padrão de projeto aplicado a um cenário do mundo real.
-
----
-
-## ?? Padrões Implementados
-
-| Categoria      | Padrão                                            | Descrição                                                                | Status       |
-| :------------- | :------------------------------------------------ | :----------------------------------------------------------------------- | :----------- |
-| **Behavioral** | [Strategy](./src/behavioral/strategy)             | Cálculo de Fretes (Sedex/PAC) sem IFs                                    | ? Pronto    |
-| **Behavioral** | [Observer](./src/behavioral/observer)             | Desacoplamento de notificações (Loja/Clientes) via Publish-Subscribe     | ? Pronto    |
-| **Creational** | [Factory Method](./src/creational/factory_method) | Resolve o "Dilema da Criação" removendo a instanciação do Form           | ? Pronto    |
-| **Structural** | [Facade](./src/structural/facade)                 | Simplificação de Checkout (Estoque, Financeiro e NF) via interface única | ? Concluído |
+Cada pasta dentro de `src` representa um padrÃ£o de projeto aplicado a um cenÃ¡rio do mundo real.
 
 ---
 
-## ??? Tecnologias e Compatibilidade
+## ğŸ“š PadrÃµes Implementados
 
-O projeto foi desenvolvido utilizando **Delphi 12 (Athens)**, mas o código-fonte (`.pas`) é compatível com versões anteriores.
-
-- **Linguagem:** Object Pascal (Delphi).
-- **Compatibilidade:** Testado no Delphi 12, mas compatível com Delphi Berlin, Tokyo, Rio, Sydney, Alexandria e anteriores (que suportem Generics/Interfaces).
-- **Testes:** DUnitX (Recomendado para versões XE ou superiores).
-
-> **Dica para versões antigas:** Se você usa uma versão muito antiga (ex: Delphi 7), basta criar um novo projeto e adicionar as units manualmente. A lógica dos padrões funciona perfeitamente, bastando ajustar a sintaxe de Generics se necessário.
+| Categoria | PadrÃ£o | DescriÃ§Ã£o | Status |
+| :--- | :--- | :--- | :--- |
+| **Behavioral** | [Strategy](./src/behavioral/strategy) | CÃ¡lculo de Fretes (Sedex/PAC) sem IFs | âœ… Pronto |
+| **Behavioral** | [Observer](./src/behavioral/observer) | Desacoplamento de notificaÃ§Ãµes (Loja/Clientes) via Publish-Subscribe | âœ… Pronto |
+| **Creational** | [Factory Method](./src/creational/factory_method) | Resolve o "Dilema da CriaÃ§Ã£o" removendo a instanciaÃ§Ã£o do Form | âœ… Pronto |
+| **Structural** | [Facade](./src/structural/facade) | SimplificaÃ§Ã£o de Checkout (Estoque, Financeiro e NF) via interface Ãºnica | âœ… ConcluÃ­do |
 
 ---
 
-## ?? Como Executar
+## ğŸ› ï¸ Tecnologias e Compatibilidade
 
-1.  **Clone o repositório:**
+O projeto foi desenvolvido utilizando **Delphi 12 (Athens)**, mas o cÃ³digo-fonte (`.pas`) Ã© compatÃ­vel com versÃµes anteriores.
+
+* **Linguagem:** Object Pascal (Delphi).
+* **Compatibilidade:** Testado no Delphi 12, mas compatÃ­vel com Delphi Berlin, Tokyo, Rio, Sydney, Alexandria e anteriores (que suportem Generics/Interfaces).
+* **Testes:** DUnitX (Recomendado para versÃµes XE ou superiores).
+
+> **Dica para versÃµes antigas:** Se vocÃª usa uma versÃ£o muito antiga (ex: Delphi 7), basta criar um novo projeto e adicionar as units manualmente. A lÃ³gica dos padrÃµes funciona perfeitamente, bastando ajustar a sintaxe de Generics se necessÃ¡rio.
+
+---
+
+## ğŸš€ Como Executar
+
+1.  **Clone o repositÃ³rio:**
